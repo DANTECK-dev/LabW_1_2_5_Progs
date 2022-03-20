@@ -156,6 +156,16 @@
     <ClInclude Include="..\..\LabW_1_2_4_Progs\LabW_1_2_4_Progs\SecondGeneralTask.h" />
     <ClInclude Include="..\..\LabW_1_2_4_Progs\LabW_1_2_4_Progs\ThisIs.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\LabW_1_2_4_Progs\LabW_1_2_4_Progs\Input_Clients.txt" />
+    <Text Include="..\..\LabW_1_2_4_Progs\LabW_1_2_4_Progs\Input_Massive.txt" />
+    <Text Include="..\..\LabW_1_2_4_Progs\LabW_1_2_4_Progs\Input_String.txt" />
+    <Text Include="..\..\LabW_1_2_4_Progs\LabW_1_2_4_Progs\Input_Students.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\LabW_1_2_4_Progs\LabW_1_2_4_Progs\pay.html" />
+    <None Include="..\..\LabW_1_2_4_Progs\LabW_1_2_4_Progs\test.html" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

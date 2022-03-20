@@ -60,4 +60,26 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\LabW_1_2_4_Progs\LabW_1_2_4_Progs\Input_String.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="..\..\LabW_1_2_4_Progs\LabW_1_2_4_Progs\Input_Students.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="..\..\LabW_1_2_4_Progs\LabW_1_2_4_Progs\Input_Clients.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="..\..\LabW_1_2_4_Progs\LabW_1_2_4_Progs\Input_Massive.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\LabW_1_2_4_Progs\LabW_1_2_4_Progs\pay.html">
+      <Filter>Файлы ресурсов</Filter>
+    </None>
+    <None Include="..\..\LabW_1_2_4_Progs\LabW_1_2_4_Progs\test.html">
+      <Filter>Файлы ресурсов</Filter>
+    </None>
+  </ItemGroup>
 </Project>
