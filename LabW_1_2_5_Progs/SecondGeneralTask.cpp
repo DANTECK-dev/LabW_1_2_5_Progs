@@ -2,6 +2,7 @@
 #include "ThisIs.h"
 #include <iostream>
 #include <conio.h>
+#include <string>
 
 using namespace std;
 
@@ -14,69 +15,106 @@ enum class secondGeneralTaskMenu
 	Division
 };
 
-double calc(double a, double b, int f)
+class Person
 {
-	double g;
+private:
+	char* Name,
+		* Surname,
+		* Patronymic,
+		* Age,
+		* Gender;
 
-	switch ((secondGeneralTaskMenu)f)
+public:
+
+	Person()
 	{
-		case secondGeneralTaskMenu::Exit:
-			return 0;
+		Name = new char[4];
+		Surname = new char[6];
+		Patronymic = new char[8];
+		Age = new char[2];
+		Gender = new char[7];
 
-		case secondGeneralTaskMenu::Addition:
-		{
-			g = a + b;
-			break;
-		}
-
-		case secondGeneralTaskMenu::Subtraction:
-		{
-			g = a - b;
-			break;
-		}
-
-		case secondGeneralTaskMenu::Multiplication:
-		{
-			g = a * b;
-			break;
-		}
-
-		case secondGeneralTaskMenu::Division:
-		{
-			if (b == 0)
-				throw exception("\n\tОшибка, деление на 0! ... ");
-			g = a / b;
-			break;
-		}
-
-		default:
-			throw exception("\n\tОшибка ввода номера операции");
+		Patronymic[0] = 'И';	Gender[0] = 'м';	Surname[0] = 'И';	Name[0] = 'И';		Age[0] = '2';
+		Patronymic[1] = 'в';	Gender[1] = 'у';	Surname[1] = 'в';	Name[1] = 'в';		Age[1] = '3';
+		Patronymic[2] = 'а';	Gender[2] = 'ж';	Surname[2] = 'а';	Name[2] = 'а';
+		Patronymic[3] = 'н';	Gender[3] = 'c';	Surname[3] = 'н';	Name[3] = 'н';
+		Patronymic[4] = 'о';	Gender[4] = 'к';	Surname[4] = 'о';
+		Patronymic[5] = 'в';	Gender[5] = 'о';	Surname[5] = 'в';
+		Patronymic[6] = 'и';	Gender[6] = 'й';
+		Patronymic[7] = 'ч';
 	}
-	return g;
-}
+
+	Person(char Name[], char Surname[], char Patronymic[], char Age[], char Gender[])
+	{
+		this->Name = Name;
+		this->Surname = Surname;
+		this->Patronymic = Patronymic;
+		this->Age = Age;
+		this->Gender = Gender;
+	}
+
+	Person(string Name, string Surname, string Patronymic, string Age, string Gender)
+	{
+		int lenName = Name.length();
+		int lenSurname = Surname.length();
+		int lenPatronymic = Patronymic.length();
+		int lenAge = Age.length();
+		int lenGender = Gender.length();
+
+		this->Name = new char[lenName];
+		this->Surname = new char[lenSurname];
+		this->Patronymic = new char[lenPatronymic];
+		this->Age = new char[lenAge];
+		this->Gender = new char[lenGender];
+
+		for (int i = 0; i < lenName; i++)
+			this->Name[i] = Name[i];
+
+		for (int i = 0; i < lenSurname; i++)
+			this->Surname[i] = Surname[i];
+
+		for (int i = 0; i < lenPatronymic; i++)
+			this->Patronymic[i] = Patronymic[i];
+
+		for (int i = 0; i < lenAge; i++)
+			this->Age[i] = Age[i];
+
+		for (int i = 0; i < lenGender; i++)
+			this->Gender[i] = Gender[i];
+
+		/*
+		this->Name*			= Name.c_str();
+		this->Surname*		= Surname.c_str();
+		this->Patronymic	= Patronymic.c_str();
+		this->Age			= Age.c_str();
+		this->Gender		= Gender.c_str();
+		*/
+	}
+
+	~Person()
+	{
+		delete Name;
+		delete Surname;
+		delete Patronymic;
+		delete Age;
+		delete Gender;
+	}
+
+	void Show()
+	{
+		cout << "\n\tИмя: " << Name << "\n\tФамилия: " << Surname << "\n\tОтчество: "
+			<< Patronymic << "\n\tВозвраст: " << Age << "\n\tПол: " << Gender;
+	}
+};
 
 void secondGeneralTask()
 {
-	cout << "\n\tВведите 1 число: ";
-	int a;
-	cin >> a;
+	Person Human;
 
-	cout << "\tВведите 2 число: ";
-	int b;
-	cin >> b;
 
-	cout << "\n\tВведите номер действия: \n\n\t1. Сложение\n\t2. Вычитание\n\t3. Умножение\n\t4. Деление\n\t0. Выход\n\n\t";
-	char ff;
-	cin >> ff;
 
-	int f = isInteger(ff);
 
-	double g;
 
-	g = calc(a, b, f);
 
-	cout << "\n\tРезультат функции: " << g << " ... ";
-	char p = _getch();
-	system("cls");
 	return;
 }

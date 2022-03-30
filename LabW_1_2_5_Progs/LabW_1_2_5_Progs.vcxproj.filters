@@ -15,52 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\LabW_1_2_4_Progs\LabW_1_2_4_Progs\AdditionalTask.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\LabW_1_2_4_Progs\LabW_1_2_4_Progs\IndividualTask.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\LabW_1_2_4_Progs\LabW_1_2_4_Progs\SecondGeneralTask.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\LabW_1_2_4_Progs\LabW_1_2_4_Progs\Source.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\LabW_1_2_4_Progs\LabW_1_2_4_Progs\ThisIs.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\LabW_1_2_4_Progs\LabW_1_2_4_Progs\FirstGeneralTask.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\LabW_1_2_4_Progs\LabW_1_2_4_Progs\FunctionsForAnIndividualTask.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\LabW_1_2_4_Progs\LabW_1_2_4_Progs\IndividualTask.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\LabW_1_2_4_Progs\LabW_1_2_4_Progs\PersonStruct.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\LabW_1_2_4_Progs\LabW_1_2_4_Progs\SecondGeneralTask.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\LabW_1_2_4_Progs\LabW_1_2_4_Progs\ThisIs.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\LabW_1_2_4_Progs\LabW_1_2_4_Progs\AdditionalTask.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\LabW_1_2_4_Progs\LabW_1_2_4_Progs\FirstGeneralTask.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\LabW_1_2_4_Progs\LabW_1_2_4_Progs\FunctionsForAnIndividualTask.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
     <Text Include="..\..\LabW_1_2_4_Progs\LabW_1_2_4_Progs\Input_String.txt">
       <Filter>Файлы ресурсов</Filter>
     </Text>
@@ -81,5 +35,51 @@
     <None Include="..\..\LabW_1_2_4_Progs\LabW_1_2_4_Progs\test.html">
       <Filter>Файлы ресурсов</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="IndividualTask.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="SecondGeneralTask.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="ThisIs.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="AdditionalTask.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="FirstGeneralTask.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="FunctionsForAnIndividualTask.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Source.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="IndividualTask.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="PersonStruct.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="SecondGeneralTask.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="ThisIs.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="AdditionalTask.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="FirstGeneralTask.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="FunctionsForAnIndividualTask.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
