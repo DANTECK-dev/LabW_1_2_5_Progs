@@ -1,18 +1,11 @@
 
-#define VER 2
+#include "Libraries.h"
 
 #include "IndividualTask.h"
 
 #include "FunctionsForAnIndividualTask.h"
 #include "PersonStruct.h"
 #include "ThisIs.h"
-
-#include <iostream>
-#include <conio.h>
-#include <ctype.h>
-
-
-using namespace std;
 
 enum class individualTaskMenu
 {

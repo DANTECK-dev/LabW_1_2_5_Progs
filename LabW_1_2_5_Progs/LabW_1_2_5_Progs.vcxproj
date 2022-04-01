@@ -162,6 +162,7 @@
     <ClInclude Include="FirstGeneralTask.h" />
     <ClInclude Include="FunctionsForAnIndividualTask.h" />
     <ClInclude Include="IndividualTask.h" />
+    <ClInclude Include="Libraries.h" />
     <ClInclude Include="PersonStruct.h" />
     <ClInclude Include="SecondGeneralTask.h" />
     <ClInclude Include="ThisIs.h" />

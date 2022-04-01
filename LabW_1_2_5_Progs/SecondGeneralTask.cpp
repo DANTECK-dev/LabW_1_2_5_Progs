@@ -1,10 +1,7 @@
 #include "SecondGeneralTask.h"
 #include "ThisIs.h"
-#include <iostream>
-#include <conio.h>
-#include <string>
 
-using namespace std;
+#include "Libraries.h"
 
 enum class secondGeneralTaskMenu
 {
