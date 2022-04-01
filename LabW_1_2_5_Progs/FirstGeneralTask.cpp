@@ -37,6 +37,7 @@ public:
 
 	int long square_perimeter()
 	{
+
 		return (height + length) * 2;
 	}
 
