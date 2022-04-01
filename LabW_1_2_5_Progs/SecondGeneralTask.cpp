@@ -196,7 +196,7 @@ void secondGeneralTask()
 	cout << "\n\t¬ведите отчество: ";
 	cin>>Patronymic;
 
-	cout << "\n\t¬ведите возвраст: ";
+	cout << "\n\t¬ведите возвраст: ";	
 	cin>>Age;
 
 	cout << "\n\t¬ведите пол: ";
