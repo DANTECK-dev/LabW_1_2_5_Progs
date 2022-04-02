@@ -4,6 +4,49 @@
 
 #include "PersonClass.h"
 
+void Person::Data::SortData		(Person*& head, Person*& tail, Person*& clients)
+{
+	if (tail == NULL && head == NULL)
+		throw exception("\n\n\tНет данных клиентов для сортировки...");
+
+	if (clients == head && clients == tail)
+		throw exception("\n\n\tМало данных клиентов для сортировки...");
+
+	clients = head;
+	int counter = 1;
+	Person* temp = new Person;
+	
+	while (true) 
+	{
+		counter++;
+		clients = clients->next;
+		if (clients == tail) break;
+	}
+
+	clients = head;
+
+	for (int i = 1; i < counter; i++)
+	{
+		clients = head;
+
+		for (int j = 0; j < counter - i; j++)
+		{
+			if (clients->DATA.Summ > clients->next->DATA.Summ)
+			{
+				temp->DATA = clients->DATA;
+				clients->DATA = clients->next->DATA;
+				clients->next->DATA = temp->DATA;
+			}
+			clients = clients->next;
+		}
+	}
+	cout << "\n\n\tСортировка по сумме завершена, нажмите любую кдавишу для возврата в меню... ";
+	char p = _getch();
+	system("cls");
+	return;
+	
+}
+
 void Person::addClients			(Person*& head, Person*& tail, Person*& clients)
 {
 	cout << "\n\n\tДобавление клиента\n";
@@ -297,20 +340,23 @@ void Person::swapAndDelClients	(Person*& head, Person*& tail, Person*& clients)
 	if (clients != head && clients != tail) {
 		clients->prev->next = clients->next;
 		clients->next->prev = clients->prev;
+		delete clients;
 	}
 	else if (clients == head && clients != tail) {
 		head = clients->next;
 		head->prev = NULL;
+		delete clients;
 	}
 	else if (clients == tail && clients != head) {
 		tail = clients->prev;
 		tail->next = NULL;
+		delete clients;
 	}
 	else {
 		head = NULL;
 		tail = NULL;
+		this == NULL;
 	}
-	delete clients;
 }
 void Person::delClients			(Person*& head, Person*& tail, Person*& clients)
 {
