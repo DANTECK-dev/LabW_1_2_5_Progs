@@ -12,7 +12,7 @@ enum class secondGeneralTaskMenu
 	Division
 };
 
-class Person
+class Human
 {
 private:
 	char* Name,
@@ -29,7 +29,7 @@ private:
 
 public:
 
-	Person()
+	Human()
 	{
 		cout << "\n\tпустой конструктор\n\t";
 
@@ -56,7 +56,7 @@ public:
 		Patronymic[8] = '\0';
 	}
 
-	/*	Person(char Name[], char Surname[], char Patronymic[], char Age[], char Gender[])
+	/*	Human(char Name[], char Surname[], char Patronymic[], char Age[], char Gender[])
 	{
 		this->Name = Name;
 		this->Surname = Surname;
@@ -65,7 +65,7 @@ public:
 		this->Gender = Gender;
 	}*/
 
-	Person(string Name, string Surname, string Patronymic, string Age, string Gender)
+	Human(string Name, string Surname, string Patronymic, string Age, string Gender)
 	{
 		cout << "\n\tконструктор с параметрами\n\t";
 
@@ -110,7 +110,7 @@ public:
 		*/
 	}
 
-	Person(const Person &other)
+	Human(const Human&other)
 	{
 		cout << "\n\tконструктор копирования\n\t";
 
@@ -156,7 +156,7 @@ public:
 		this->Gender[other.lenGender] = '\0';
 	}
 
-	~Person()
+	~Human()
 	{
 		cout << "\n\tdestruct\n\t";
 		delete Name;
@@ -175,7 +175,7 @@ public:
 
 void secondGeneralTask()
 {
-	Person *Human_1 = new Person();
+	Human *Human_1 = new Human();
 	Human_1->Show();
 	cout << endl;
 	string Name;
@@ -199,7 +199,7 @@ void secondGeneralTask()
 	cout << "\n\tВведите пол: ";
 	cin >> Gender;
 
-	Person *Human_2 = new Person(Name, Surname, Patronymic, Age, Gender);
+	Human*Human_2 = new Human(Name, Surname, Patronymic, Age, Gender);
 
 	Human_2->Show();
 

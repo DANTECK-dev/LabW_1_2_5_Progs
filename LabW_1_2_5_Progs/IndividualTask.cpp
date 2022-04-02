@@ -77,7 +77,7 @@ void individualTask()
 			{
 				try
 				{
-					Person.addClients(head, tail, clients);
+					clients->addClients(head, tail, clients);
 				}
 				catch (const exception& err)
 				{
@@ -93,7 +93,7 @@ void individualTask()
 			{
 				try
 				{
-					sortClients(head, tail, clients);
+					clients->sortClients(head, tail, clients);
 				}
 				catch (const exception& err)
 				{
@@ -109,7 +109,7 @@ void individualTask()
 			{
 				try
 				{
-					transformClients(head, tail, clients);
+					clients->transformClients(head, tail, clients);
 				}
 				catch (const exception& err)
 				{
@@ -124,7 +124,7 @@ void individualTask()
 			{
 				try
 				{
-					delClients(head, tail, clients);
+					clients->delClients(head, tail, clients);
 				}
 				catch (const exception& err)
 				{
@@ -139,7 +139,7 @@ void individualTask()
 			{
 				try
 				{
-					showClients(head, tail, clients);
+					clients->showClients(head, tail, clients);
 				}
 				catch (const exception& err)
 				{
@@ -155,7 +155,7 @@ void individualTask()
 			{
 				try
 				{
-					searchClients(head, tail, clients);
+					clients->searchClients(head, tail, clients);
 				}
 				catch (const exception& err)
 				{
@@ -173,7 +173,7 @@ void individualTask()
 			{
 				try
 				{
-					saveClients(head, tail, clients);
+					clients->saveClients(head, tail, clients);
 				}
 				catch (const exception& err)
 				{
@@ -187,7 +187,7 @@ void individualTask()
 			case individualTaskMenu::Load:
 			{
 				try {
-					downloadClients(head, tail, clients);
+					clients->downloadClients(head, tail, clients);
 				}
 				catch (const exception& err)
 				{

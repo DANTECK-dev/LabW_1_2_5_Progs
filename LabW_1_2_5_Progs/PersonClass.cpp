@@ -4,7 +4,7 @@
 
 #include "PersonClass.h"
 
-void Person::addClients(Person*& head, Person*& tail, Person*& clients)
+void Person::addClients			(Person*& head, Person*& tail, Person*& clients)
 {
 	cout << "\n\n\tДобавление клиента\n";
 	string	newSurname = { "None" };
@@ -64,7 +64,7 @@ void Person::addClients(Person*& head, Person*& tail, Person*& clients)
 	return;
 }
 
-void Person::sortClients(Person*& head, Person*& tail, Person*& clients)
+void Person::sortClients		(Person*& head, Person*& tail, Person*& clients)
 {
 	if (tail == NULL && head == NULL)
 		throw exception("\n\n\tНет данных клиентов для сортировки...");
@@ -146,7 +146,7 @@ void Person::sortClients(Person*& head, Person*& tail, Person*& clients)
 	system("cls");
 }
 
-void Person::transform(Person*& head, Person*& tail, Person*& clients)
+void Person::transform			(Person*& head, Person*& tail, Person*& clients)
 {
 	cout << "\n\n\tКакие данные изменить\n"
 		<< "\n\t1. Фамилию - " << clients->DATA.Surname
@@ -177,7 +177,7 @@ void Person::transform(Person*& head, Person*& tail, Person*& clients)
 	}
 	system("cls");
 }
-void Person::transformClients(Person*& head, Person*& tail, Person*& clients)
+void Person::transformClients	(Person*& head, Person*& tail, Person*& clients)
 {
 	if (tail == NULL && head == NULL)
 		throw exception("\n\n\tНет данных клиентов для изменения...");
@@ -292,7 +292,7 @@ void Person::transformClients(Person*& head, Person*& tail, Person*& clients)
 	system("cls");
 }
 
-void Person::swapAndDelClients(Person*& head, Person*& tail, Person*& clients)
+void Person::swapAndDelClients	(Person*& head, Person*& tail, Person*& clients)
 {
 	if (clients != head && clients != tail) {
 		clients->prev->next = clients->next;
@@ -312,7 +312,7 @@ void Person::swapAndDelClients(Person*& head, Person*& tail, Person*& clients)
 	}
 	delete clients;
 }
-void Person::delClients(Person*& head, Person*& tail, Person*& clients)
+void Person::delClients			(Person*& head, Person*& tail, Person*& clients)
 {
 	if (tail == NULL && head == NULL)
 		throw exception("\n\n\tНет данных клиентов для удаления...");
@@ -364,7 +364,12 @@ void Person::delClients(Person*& head, Person*& tail, Person*& clients)
 		if (searchID == -1)
 			throw exception("\n\n\tКлиент не найден, нажмите любую клавишу что-бы вернуться в меню... ");
 
-		if (searchID >= 0) {
+		if (searchID >= 0) 
+		{
+			clients = head;
+			for (int i = 1; i < searchID; i++)
+				clients = clients->next;
+
 			cout << "\n\n\tУдалить данные клиента " << clients->DATA.Surname << " " << clients->DATA.Name
 				<< " " << clients->DATA.Patronymic << "\n\n\t1. Да\t2. Нет\n\n\t";
 			char inputHH;
@@ -441,7 +446,7 @@ void Person::delClients(Person*& head, Person*& tail, Person*& clients)
 	system("cls");
 }
 
-void Person::showClients(Person*& head, Person*& tail, Person*& clients)
+void Person::showClients		(Person*& head, Person*& tail, Person*& clients)
 {
 	if (tail == NULL && head == NULL)
 		throw exception("\n\n\tНет данных клиентов для вывода...");
@@ -538,12 +543,15 @@ void Person::showClients(Person*& head, Person*& tail, Person*& clients)
 	system("cls");
 }
 
-void Person::show(Person*& clients)
+void Person::show				()
 {
-	cout << "\n\n\tФИО: " << clients->DATA.Surname << " " << clients->DATA.Name << " " << clients->DATA.Patronymic << " Адресс: "
-		<< clients->DATA.Address << "\n\tТелефоный номер: " << clients->DATA.PhoneNum << " День оплаты: " << clients->DATA.PayDay << " Сумма: " << clients->DATA.Summ;
+	cout << "\n\n\tФИО: " << this->DATA.Surname << " " << this->DATA.Name << " " << this->DATA.Patronymic 
+		<< " Адресс: "<< this->DATA.Address 
+		<< "\n\tТелефоный номер: " << this->DATA.PhoneNum 
+		<< " День оплаты: " << this->DATA.PayDay 
+		<< " Сумма: " << this->DATA.Summ;
 }
-void Person::searchClients(Person*& head, Person*& tail, Person*& clients)
+void Person::searchClients		(Person*& head, Person*& tail, Person*& clients)
 {
 	if (tail == NULL && head == NULL)
 		throw exception("\n\n\tНет данных клиентов для поиска...");
@@ -559,9 +567,9 @@ void Person::searchClients(Person*& head, Person*& tail, Person*& clients)
 	clients = head;
 	bool searchID = false;
 	while (true) {
-		if (inputStr == clients->DATA.Surname) { searchID = true; show(clients); }
-		if (inputStr == clients->DATA.Name) { searchID = true; show(clients); }
-		if (inputStr == clients->DATA.Patronymic) { searchID = true; show(clients); }
+		if (inputStr == clients->DATA.Surname) { searchID = true; show(); }
+		if (inputStr == clients->DATA.Name) { searchID = true; show(); }
+		if (inputStr == clients->DATA.Patronymic) { searchID = true; show(); }
 		if (clients->next == NULL) break;
 		clients = clients->next;
 	}
@@ -573,7 +581,7 @@ void Person::searchClients(Person*& head, Person*& tail, Person*& clients)
 	system("cls");
 }
 
-void Person::saveClients(Person*& head, Person*& tail, Person*& clients)
+void Person::saveClients		(Person*& head, Person*& tail, Person*& clients)
 {
 	if (tail == NULL && head == NULL)
 		throw exception("\n\n\tНет данных клиентов для сохранения...");
@@ -642,7 +650,7 @@ void Person::saveClients(Person*& head, Person*& tail, Person*& clients)
 	}
 }
 
-void Person::downloadClients(Person*& head, Person*& tail, Person*& clients)
+void Person::downloadClients	(Person*& head, Person*& tail, Person*& clients)
 {
 	cout << "\n\n\t1. Загрузтиь из файла с названием " << INDIVID_INPUT_FILE_LOCATION
 		<< " с исходным кодом\n\t2. Изменить название файла\n\t0. Выход\n\n\t";
