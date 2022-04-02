@@ -18,6 +18,13 @@
 #include <ctype.h>
 #include <limits>
 
+#include "ThisIs.h"
+
 #define VER 2
+
+#define INDIVID_INPUT_FILE_LOCATION		"Input_Clients.txt"
+#define INDIVID_OUTPUT_FILE_LOCATION	"Output_Clients.txt"
+
+
 
 using namespace std;

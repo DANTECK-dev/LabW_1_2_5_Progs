@@ -58,12 +58,15 @@
     <ClCompile Include="Source.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="PersonClass.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IndividualTask.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="PersonStruct.h">
+    <ClInclude Include="PersonClass.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="SecondGeneralTask.h">

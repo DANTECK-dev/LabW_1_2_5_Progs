@@ -153,6 +153,7 @@
     <ClCompile Include="FirstGeneralTask.cpp" />
     <ClCompile Include="FunctionsForAnIndividualTask.cpp" />
     <ClCompile Include="IndividualTask.cpp" />
+    <ClCompile Include="PersonClass.cpp" />
     <ClCompile Include="SecondGeneralTask.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="ThisIs.cpp" />
@@ -163,7 +164,7 @@
     <ClInclude Include="FunctionsForAnIndividualTask.h" />
     <ClInclude Include="IndividualTask.h" />
     <ClInclude Include="Libraries.h" />
-    <ClInclude Include="PersonStruct.h" />
+    <ClInclude Include="PersonClass.h" />
     <ClInclude Include="SecondGeneralTask.h" />
     <ClInclude Include="ThisIs.h" />
   </ItemGroup>

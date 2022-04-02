@@ -45,7 +45,7 @@ int isInteger_l(char *val)
 
 		for (int i = 1; i < len; i++)
 		{
-			if ((48 <= int(val[i])) && (57 >= int(val[i])))
+			if ( (48 <= int(val[i])) && (57 >= int(val[i])) )
 			{
 				res -= ((val[i]) - 48) * l;
 			}

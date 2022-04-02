@@ -4,8 +4,7 @@
 #include "IndividualTask.h"
 
 #include "FunctionsForAnIndividualTask.h"
-#include "PersonStruct.h"
-#include "ThisIs.h"
+#include "PersonClass.h"
 
 enum class individualTaskMenu
 {
@@ -27,9 +26,9 @@ void individualTask()
 	SetConsoleOutputCP(1251);
 	SetConsoleCP(1251);
 
-	person* head = NULL;
-	person* tail = NULL;
-	person* clients = NULL;
+	Person* head = NULL;
+	Person* tail = NULL;
+	Person* clients = NULL;
 
 	///////	   лемч    /////////
 
@@ -78,7 +77,7 @@ void individualTask()
 			{
 				try
 				{
-					addClients(head, tail, clients);
+					Person.addClients(head, tail, clients);
 				}
 				catch (const exception& err)
 				{
