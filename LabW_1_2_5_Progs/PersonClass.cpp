@@ -355,7 +355,7 @@ void Person::swapAndDelClients	(Person*& head, Person*& tail, Person*& clients)
 	else {
 		head = NULL;
 		tail = NULL;
-		this == NULL;
+
 	}
 }
 void Person::delClients			(Person*& head, Person*& tail, Person*& clients)
